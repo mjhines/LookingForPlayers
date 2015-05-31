@@ -1,0 +1,127 @@
+html{
+	height:100%;
+}
+
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #eee;
+  height:100%;
+}
+
+body{ background: url('/static/img/wasd.jpeg') no-repeat fixed center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.navbar {height:70px;}
+
+.navbar-element {font:}
+
+.container {max-width:50%;background:rgba(0,0,0,0.6);opacity:1.0}
+
+.padded {padding-top:50px; padding-bottom:75px;}
+
+.button-margin {margin-left:30px;padding-left:40px; padding-right:40px;}
+
+h1,h2,h3,h4,h5,h6, .navbar-element{
+    text-transform: uppercase;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color:#E6E6E6;
+}
+
+a {color: #E6E6E6;
+}
+
+p {color: #E6E6E6;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+
+.lead {font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+    color:#777777;
+    font-size:18px;
+    max-width:70%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:10px;
+}
+
+.leadlight {font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+    color:#a4a4a4;
+    font-size:18px;
+    max-width:70%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:10px;
+}
+
+#cities2{
+	padding-bottom:10px;
+	border-style: solid;
+	border-color:#c4c4c4;
+}
+
+#media-container{
+	margin-top:5px;
+    padding-bottom:0px;
+	border-style: solid;
+	border-color:#c4c4c4;   
+	padding-right:0px;
+}
+
+.media{
+	padding-top:20px;
+}
+
+#cities1 {
+    overflow-y:auto; 
+    overflow-x:hidden; 
+   	height:400px;
+}
+
+.fixedH {
+    overflow-y:hidden; 
+    overflow-x:hidden; 
+   	height:30px;
+}
+
+.lighttext {
+    color: #C774B7;
+}
+
+.errortext {
+    color: #CC0000;
+}
+
+#map-container {height: 400px;
+	float:right;
+}
+
+.media-object{
+	max-width:70px;
+}
+
+a:link {
+    color: #003D99;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #003D99;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #A3C8FF;
+    text-decoration: underline;
+}
+

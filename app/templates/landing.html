@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container text-center">
+  <h2>Steam Match</h2>
+  <h4>Matching Steam users by games and by playtime </h4>
+  <br>
+  <h3>Just enter your Steam User ID:</h3>  
+</div>    
+
+<!-- <div class="container">
+    <form action="javascript:addRating();" method="post" name="game_form">
+        <p>
+            Please enter your ratings:
+            <br>
+            <input id="game" name="game" size="20" type="text" class="typeahead" value="Optional Game" onblur="prefetchBeer();"> 
+            <input class="btn btn-primary btn-xs" type="submit" value="enter">
+        </p>
+
+        <div id='ratings_table'></div>
+
+        <p id='rec-button'></p>
+    </form>
+</div> 
+ -->
+<div class="container">
+      
+  <form action="/index" method="POST"> 
+    <div class= "padded">
+      <div class="col-md-0 col-md-offset-0 col-xs-12">
+        <input id="steamid" name="steamid" type="steamid" class="form-control" placeholder="SteamID: 76561197972322556" required autofocus>
+      </div>
+    </div>
+
+    <div class="text-center">   
+      <button class="btn btn-info btn-lg button-margin" type="submit">Match Me!</button>
+    </div>
+  <br> 
+  </form>        
+</div> 
+{% endblock %}
+
+
+<!-- <div class="container">
+      
+  <form action="/index" method="POST"> 
+    <div class= "padded">
+      <div class="col-md-0 col-md-offset-0 col-xs-12">
+        <input id="steamid" name="steamid" type="steamid" class="form-control" placeholder="SteamID: 76561197972322556" required autofocus>
+      </div>
+    </div>
+
+    <div class="text-center">   
+      <button class="btn btn-info btn-lg button-margin" type="submit">Match Me!</button>
+    </div>
+  <br> 
+  </form>        
+</div>  -->
