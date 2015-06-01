@@ -1,1 +1,1 @@
-This is the first upload of the LookingForSteamPlayers app. 
+LookingForSteamPlayers.com was developed during the Insight Data Science program. This program 
