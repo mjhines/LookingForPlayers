@@ -1,7 +1,7 @@
 from flask import render_template, flash, redirect, request, url_for
 from app import app
 import userMatch
-from privateData import pdir
+from dataCollecting.privateData import pdir
 import pickle
 
 with open(pdir + 'data/unfinished_j1000', 'rb') as f:
@@ -11,9 +11,6 @@ with open(pdir + 'data/unfinished_j1000', 'rb') as f:
 @app.route('/')
 def landing():
     return render_template('landing.html')
-    # return render_template('indext.html') 
-#    return render_template('form_submit.html')	
-    # return "Enter desired search parameters!"
 
 # User Matched Page
 @app.route('/index', methods=['POST'])

@@ -4,7 +4,7 @@ User matching functions
 from __future__ import division
 from math import sqrt
 import pickle
-from privateData import pdir
+from dataCollecting.privateData import pdir
 import dataCollecting.collect as co
 
 def match(steamid,userGames):
@@ -31,10 +31,8 @@ def getMatchesNames(matches):
         temp = co.getUserDetails(person[1],{})  
         ngames = 1 
 
-        details.append({'name': temp[person[1]]['personaname'].encode('ascii','ignore'),'percent':str(int(person[0]*100)),'url': temp[person[1]]['profileurl'].encode('ascii','ignore'),'avatar': temp[person[1]]['avatarmedium'].encode('ascii','ignore')})
-        # details = (str(int(person[0]*100)),temp[person[1]]['personaname'].encode('ascii','ignore'))
-        #details.append(
-        # print(str(int(person[0]*100)) + ' percent match with ' + temp[person[1]]['personaname'].encode('ascii','ignore') + ', steamid = ' + str(person[1]) )
+        details.append({'name': temp[person[1]]['personaname'].encode('ascii','ignore'),'percent':str(int(person[0]*100)),
+            'url': temp[person[1]]['profileurl'].encode('ascii','ignore'),'avatar': temp[person[1]]['avatarmedium'].encode('ascii','ignore')})
     return details
 
 # Returns the cosine similarity for p1 and p2
@@ -69,6 +67,14 @@ def topMatches(prefs,user,compareKeys,n=5,similarity=sim_cosine):
     scores.sort()
     scores.reverse()
     return scores[0:n]
+
+def allMatches(prefs,user,compareKeys,n=5,similarity=sim_cosine):
+    
+    normalizeFactor = similarity(prefs,user,user)
+    scores=[(similarity(prefs,user,other)/normalizeFactor,other) for other in prefs]
+    
+    # Sort the list so the highest scores appear at the top
+    return scores[0:n]    
 
 def getMatches(prefs,user,n=5,similarity=sim_cosine):
     
