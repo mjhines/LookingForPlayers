@@ -1,4 +1,5 @@
-privateData.py
 privateData.*
 .ipynb_checkpoints
 *.pyc
+*~
+flask
