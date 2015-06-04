@@ -2,7 +2,7 @@
 {% block content %}
 
 <div class="container text-center">
-  <h2>Steam Match</h2>
+  <h2>Looking for Steam Players</h2>
   <h4>Matching Steam users by games and by playtime </h4>
   <br>
   <h3>Just enter your Steam User ID:</h3>  
@@ -23,12 +23,33 @@
     </form>
 </div> 
  -->
-<div class="container">
+<div class="container"> 
+  <form action="/index" method="POST">
+    <div class= "padded">
+      <div class="col-md-5 col-md-offset-1 col-xs-12">
+        <input id="steamid" name="steamid" type="steamid" class="form-control" placeholder="SteamID: 76561197972322556" required autofocus>
+      </div>
+      <div class="col-md-5 col-xs-12">      
+        <input id="nMatches" name="nMatches" type="nMatches" class="form-control" placeholder="Number of matches to return: 10" required> 
+      </div>
+    </div>
+    <div class="text-center">   
+      <button class="btn btn-info btn-lg button-margin" type="submit">Match Me!</button>
+    </div>
+   </form>    
+</div> 
+
+<!-- <div class="container">
       
   <form action="/index" method="POST"> 
     <div class= "padded">
       <div class="col-md-0 col-md-offset-0 col-xs-12">
         <input id="steamid" name="steamid" type="steamid" class="form-control" placeholder="SteamID: 76561197972322556" required autofocus>
+      </div>
+    </div>
+    <div class= "padded">
+      <div class="col-md-0 col-md-offset-0 col-xs-12">
+        <input id="nMatches" name="nMatches" type="nMatches" class="form-control" placeholder="10" required autofocus>
       </div>
     </div>
 
@@ -37,7 +58,7 @@
     </div>
   <br> 
   </form>        
-</div> 
+</div>  -->
 {% endblock %}
 
 

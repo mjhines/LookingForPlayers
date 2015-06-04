@@ -16,6 +16,8 @@ def landing():
 @app.route('/index', methods=['POST'])
 def index():
 	steamid = request.form['steamid']	
+	nMatches = request.form['nMatches']	
+	print nMatches
 
 	# if steamid not in userGames.keys():
 	# 	print 'Updating user into database...'
@@ -29,7 +31,9 @@ def index():
 	# matches = getMatches(userGames,steamid,n=10)
 	# topMatches = getMatchesNames(matches)
 
-	topMatches = userMatch.match(steamid,userGames)
+	topMatches = userMatch.match(steamid,userGames,int(nMatches))
+
+	
 	# topMatches = [
 	# 	{'name': 'The Mathematician', 'percent': '80'},
 	# 	{'name': 'The Professional', 'percent': '70'}
