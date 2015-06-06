@@ -4,8 +4,11 @@ import userMatch
 from dataCollecting.privateData import pdir
 import pickle
 
-with open(pdir + 'data/unfinished_j1000', 'rb') as f:
+with open(pdir + 'data/userGamesDictPreCompute', 'rb') as f:
     userGames = pickle.load(f)
+
+with open(pdir + 'data/userDict', 'rb') as f:
+    userDict = pickle.load(f)
 
 # Landing Page 
 @app.route('/')
@@ -17,7 +20,16 @@ def landing():
 def index():
 	steamid = request.form['steamid']	
 	nMatches = request.form['nMatches']	
-	print nMatches
+
+	try: 
+		nMatches = int(nMatches)
+	except:
+		return render_template('landing.html')
+
+	try:
+		steamNumber = int(steamid)
+	except:
+		return render_template('landing.html')
 
 	# if steamid not in userGames.keys():
 	# 	print 'Updating user into database...'
@@ -31,15 +43,9 @@ def index():
 	# matches = getMatches(userGames,steamid,n=10)
 	# topMatches = getMatchesNames(matches)
 
-	topMatches = userMatch.match(steamid,userGames,int(nMatches))
+	topMatches = userMatch.match(steamid,userGames,int(nMatches),userDict)
 
-	
-	# topMatches = [
-	# 	{'name': 'The Mathematician', 'percent': '80'},
-	# 	{'name': 'The Professional', 'percent': '70'}
-	# 	]
-	#matchName = 'miguel'
-	return render_template('index.html',steamid=steamid,topMatches = topMatches)
+	return render_template('index.html',steamid=steamid,topMatches = topMatches,nMatches=nMatches)
 
 # @app.route("/userMatches")
 # def slide():
