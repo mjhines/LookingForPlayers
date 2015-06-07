@@ -3,12 +3,13 @@ from app import app
 import userMatch
 from dataCollecting.privateData import pdir
 import pickle
+# import MySQLdb as mdb
 
 with open(pdir + 'data/userGamesDictPreCompute', 'rb') as f:
     userGames = pickle.load(f)
 
-with open(pdir + 'data/userDict', 'rb') as f:
-    userDict = pickle.load(f)
+# with open(pdir + 'data/userDict', 'rb') as f:
+#     userDict = pickle.load(f)
 
 # Landing Page 
 @app.route('/')
@@ -31,6 +32,10 @@ def index():
 	except:
 		return render_template('landing.html')
 
+	if nMatches > 100:
+		nMatches = 100
+
+
 	# if steamid not in userGames.keys():
 	# 	print 'Updating user into database...'
 	# 	userGames = co.getOwnedGames(steamid,userGames) # Collect data about each player's games
@@ -43,7 +48,7 @@ def index():
 	# matches = getMatches(userGames,steamid,n=10)
 	# topMatches = getMatchesNames(matches)
 
-	topMatches = userMatch.match(steamid,userGames,int(nMatches),userDict)
+	topMatches = userMatch.match(steamid,userGames,int(nMatches))
 
 	return render_template('index.html',steamid=steamid,topMatches = topMatches,nMatches=nMatches)
 

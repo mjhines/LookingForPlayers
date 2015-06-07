@@ -16,7 +16,7 @@ body{ background: url('/static/img/wasd.jpeg') no-repeat fixed center;
     background-size: cover;
 }
 
-.navbar {height:70px;}
+.navbar {height:50px;}
 
 .navbar-element {font:}
 
@@ -66,12 +66,6 @@ p {color: #E6E6E6;
     margin-bottom:10px;
 }
 
-#cities2{
-	padding-bottom:10px;
-	border-style: solid;
-	border-color:#c4c4c4;
-}
-
 #media-container{
 	margin-top:5px;
     padding-bottom:0px;
@@ -82,12 +76,6 @@ p {color: #E6E6E6;
 
 .media{
 	padding-top:20px;
-}
-
-#cities1 {
-    overflow-y:auto; 
-    overflow-x:hidden; 
-   	height:400px;
 }
 
 .fixedH {
@@ -104,26 +92,22 @@ p {color: #E6E6E6;
     color: #CC0000;
 }
 
-#map-container {height: 400px;
-	float:right;
-}
-
 .media-object{
 	max-width:70px;
 }
 
 a:link {
-    color: #A3C8FF;
-    text-decoration: underline;
-}
-
-a:visited {
     color: #FF0000;
     text-decoration: underline;
 }
 
+a:visited {
+    color: #A3C8FF;
+    text-decoration: underline;
+}
+
 a:hover {
-    color: #58FAF4;
+    color: #F78181;
     text-decoration: underline;
 }
 

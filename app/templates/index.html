@@ -7,21 +7,11 @@
 
 <div class="container text-center">
     {% for match in topMatches %}
-    <!-- <div class="resultscontainer text-center">  -->
       <br>
       <p> <b> <h4> <a href={{match.url|safe}}> {{ match.name }} </a> </h4> </b> </p>
       <img src={{match.avatar}} alt="HTML tutorial" style="width:164px;height:164px;border:0">
       <p> <font color=#00FF00>{{ match.percent }}%</font> compatibility <br> {{match.ncommonGames}} games in common </p> 
-    <!-- </div>   -->
-
-    <!-- <div><p>{{ match.percent }}% with <b> <a href= "" > {{ match.name }} ({{match.url}}) </a> </b></p></div> -->
     {% endfor %}
 </div>  
 
 {% endblock %}
-
-<!-- {% for match in topMatches %}
-<div>
-	<p>{{ match.percent }}% with <b> <a href=""{{match.url}}""> {{ match.name }} </a> </b></p>
-</div>  
-{% endfor %} -->

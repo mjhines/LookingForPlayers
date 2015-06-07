@@ -22,6 +22,17 @@ def listToDict(inputList,popStr):
         outputDict[name] = item
     return outputDict
 
+def getNumerousUsers(steamid): 
+    try: # Is user data public? 
+        playerSummary = json.load(urllib2.urlopen(site + 'ISteamUser/GetPlayerSummaries/v0002/?key=' + api_key + '&steamids=' + steamid))
+    except:
+        return userDict
+
+    playerSummary = (playerSummary.pop('response')).pop('players')
+    playerDetails = listToDict(playerSummary,'steamid')
+    # userDict.update({steamid: playerSummary[0]})
+    return playerDetails
+
 # Function for acquiring player details from Steam API 
 def getUserDetails(steamid,userDict): 
     try: # Is user data public? 
