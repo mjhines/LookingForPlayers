@@ -1,4 +1,4 @@
-LookingForSteamPlayers.com was developed during the Insight Data Science program, http://www.insightdatascience.com/. 
+[LookingForSteamPlayers.com] (http://www.lookingforsteamplayers.com/) was developed during the [Insight Data Science program] (http://www.insightdatascience.com/). 
 
 The goal of this project was to create a website where PC gamers could quickly and easily find people to play with based on their gaming tastes. When this project was developed the only way in which to find other gamers was to happen upon them in game, or to post, and search, on forums such as http://www.reddit.com/r/steamship.  But in the digital age with numerous websites matching people for marriage, there had to be a better way!  
 
@@ -11,5 +11,3 @@ Finally, the Steam_Games_Analysis notebook contains an interesting data story co
 LookingForSteamPlayers will continue to be supported and improved. Currently, a video game recommendation system based on relative gameplay per game is being added, as well as incorporating Steam achievements into the user matching system which would reflect on gameplay style. Please continue to check the site for new data! 
 
 Presentation: http://www.slideshare.net/mjhines13/looking-for-steam-players-insight-project
-
-Website: http://www.lookingforsteamplayers.com/
