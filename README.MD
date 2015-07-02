@@ -9,3 +9,7 @@ The iPython Notebook titled UserMatching_Validation discusses the metrics used i
 Finally, the Steam_Games_Analysis notebook contains an interesting data story concerning Steam's games and users. This includes visualizations for the upward trend of game releases and indie developers participation to that trend, an analysis of game genres by playtime and playtime per dollar, and the striking realization that the total playtime for 6 games is equivalent to the total playtime of all of the other games on Steam!  
 
 LookingForSteamPlayers will continue to be supported and improved. Currently, a video game recommendation system based on relative gameplay per game is being added, as well as incorporating Steam achievements into the user matching system which would reflect on gameplay style. Please continue to check the site for new data! 
+
+Presentation: http://www.slideshare.net/mjhines13/looking-for-steam-players-insight-project
+
+Website: http://www.lookingforsteamplayers.com/
